@@ -1,0 +1,468 @@
+/* fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+/* common style or utilities */
+
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    
+    background-color: #2D25A0;
+    margin-top: 0;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-around;   
+    padding-bottom: 86px;
+}
+a{
+    text-decoration: none;
+}
+
+main{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    font-feature-settings: 'liga' off;
+    color: #18191F;
+    margin-bottom: 10px;
+}
+hr{
+    color: white;
+}
+/*-------------------
+ top tagline section  
+ --------------------*/
+
+.top-part{
+
+    color: #FFFFFF;
+    width: 35%;
+    margin-left: 7%;
+}
+.top-title{
+    font-family: 'Poppins', sans-serif;
+    font-style:normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    
+}
+.linked-button{
+    
+    padding: 20px 40px;
+    background-color: #E02C6D;
+
+    color: white;
+    font-size: 18px;
+}
+
+.fa-arrow-right{
+    
+    margin-left:2px ;
+    font-size: 18px;
+    height: auto;
+    width: auto;
+}
+.top-banner{
+    position: relative;
+    top: -15px;
+    right: 5px;
+    width: 50%;
+    left: 20px;
+    height: 40%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+header:hover .top-banner {
+    transform: rotateY(180deg);
+}
+
+.top-banner img{
+    width: 80%;
+}
+
+ /*======================
+      players section  
+  ========================*/
+
+.players-gallery{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.players{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+
+.player{
+    width:100%;
+    height: 474px;
+    box-shadow: 0px 0px 40px 0px #00000026;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.player-image{
+    margin: auto;
+    width: 90%;
+    height: 50%;
+    position: relative;
+    top: 3px;
+}
+.player-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.player-info{
+    height: 40%;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: -30px;
+}
+.player-info p{
+    color: #6C6C6C;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;    
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 0;
+
+}
+
+/*==================
+ award section  
+ ====================*/
+
+.awarded-players{
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+
+}
+.award-section-title{
+    width: 20%;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+.fa-trophy{
+    color: #2d25a08f;
+    font-size: 40px;
+}
+#awards-holder{
+    width: 100%;
+    margin: auto;
+    height: 300px;
+    cursor: pointer;
+    background-color: transparent;
+    perspective: 1000px;
+    
+}
+
+#awards-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+#awards-holder:hover #awards-inner{
+    transform: rotateY(180deg);
+    
+}
+
+
+#awards-front,
+#awards-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#awards-front{
+    object-fit: cover;
+}
+
+#awards-back{
+    margin-top: 5px;
+    background-image: linear-gradient(#ff6f37,#e9341d);
+    color: white;
+    padding: 15px;
+    transform: rotateY(180deg);
+}
+
+#awards-back h2{
+    margin-top: 25px;
+    color: white;
+}
+
+#awards-back p{
+    color: white;
+    font-size: large;
+    font-weight: 400;
+    top:-10px
+}
+
+
+/* sponsor section  */
+
+.sponsor{
+   text-align: center;
+    margin: auto;
+    width: 90%;
+    
+    margin-top: 80px;
+}
+.sponsor-image-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+}
+.sponsor-image{
+    width: 60%;
+    height: 50%;
+}
+.sponsor-image img{
+    width: 100%;
+    height: 90%;
+}
+
+/* footer styles */
+
+footer{
+    margin-top: 80px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-banner{
+    width: 40%;
+    height: 35%;
+    margin-bottom: 20px;
+}
+.footer-banner img{
+    width: 100%;
+}
+
+.social{
+    height: 20%;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.social img{
+    height: 32px;
+    width: 32px;
+}
+
+.copyright{
+    width: 40%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+}
+
+
+ /*======================== media queries  ------------------------- */
+
+/* mobile devices */
+
+@media only screen and (max-width:688px){
+    header{
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    .top-part{
+        width: 60%;
+        margin-left: 1%;
+    }
+    .linked-button{
+        text-align: left;
+        padding: 5px 20px;
+    }
+    .top-banner{
+        width: 80%;
+        height: 50%;
+        margin:auto;
+        top: 30px;
+        left: 0;
+    }
+    .top-banner img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .players-gallery{
+    width: 90%;
+    }
+    .players{
+        width: 100%;
+        height: 80%;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+    .awarded-players{
+        width: 90%;
+    }
+    #awards-holder{
+        margin-top: 10px;
+        height: 250px;
+    }
+    #awards-front{
+        object-fit: cover;
+    }
+    #awards-back{
+        padding: 0 0 30px 5px;
+    }
+    #awards-back h2{
+        margin-top:5px ;
+    }
+    #awards-back p{
+        top: -5px;
+    }
+
+    .sponsor{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .sponsor-image{
+        width: 80%;
+        height: 80%;
+    }
+
+    footer{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .footer-banner{
+        width: 80%;
+    }
+    .copyright{
+        width: 80%;
+    }
+}
+
+ /* tablet devices */
+
+@media only screen and (min-width: 689px) and (max-width:991px){
+    header{
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    .top-part{
+        width: 60%;
+        margin-left: 1%;
+    }
+    .linked-button{
+        text-align: left;
+        padding: 5px 20px;
+    }
+    .top-banner{
+        width: 80%;
+        height: 50%;
+        margin:auto;
+        top: 30px;
+        left: 0;
+    }
+    .top-banner img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .players-gallery{
+    width: 90%;
+    }
+    .players{
+        width: 100%;
+        height: 80%;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+    }
+    .awarded-players{
+        width: 90%;
+    }
+    #awards-holder{
+        margin-top: 10px;
+        height: 250px;
+    }
+    #awards-front{
+        object-fit: cover;
+    }
+    #awards-back{
+        padding: 0 0 30px 5px;
+    }
+    #awards-back h2{
+        margin-top:5px ;
+    }
+    #awards-back p{
+        top: -5px;
+    }
+
+    .sponsor{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .sponsor-image{
+        width: 80%;
+        height: 80%;
+    }
+
+    footer{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .footer-banner{
+        width: 80%;
+    }
+    .copyright{
+        width: 80%;
+    }
+}
